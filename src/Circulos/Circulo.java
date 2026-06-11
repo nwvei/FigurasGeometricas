@@ -44,5 +44,10 @@ return radio*2;
     public Circulo(double radio) {
         this.radio = radio;
     }
+
+    @Override
+    public String toString() {
+        return "El radio es:"+radio;
+    }
     
 }
