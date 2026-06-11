@@ -27,7 +27,7 @@ private static final double PI=Math.PI;
     public void setRadio(double radio) {
         this.radio = radio;
     }
-    protected double calcularDiametro(){
+    private double calcularDiametro(){
 return radio*2;        
     }
 
