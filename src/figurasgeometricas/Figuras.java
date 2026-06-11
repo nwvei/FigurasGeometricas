@@ -9,11 +9,11 @@ package figurasgeometricas;
  * @author Student
  */
 public abstract class Figuras {
-    private double getArea() {
+    public double getArea() {
         return calcularArea();
     }
 
-    private double getPerimetro() {
+    public double getPerimetro() {
         return calcularPerimetro();
     }
 protected abstract double calcularPerimetro();
