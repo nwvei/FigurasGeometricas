@@ -10,7 +10,6 @@ import figurasgeometricas.Figuras;
  */
 public class Circulo extends Figuras{
 private double radio;
-private double diametro;
 private static final double PI=Math.PI;
 
     public double getRadio() {
@@ -18,7 +17,7 @@ private static final double PI=Math.PI;
     }
 
     public double getDiametro() {
-        return diametro;
+        return this.calcularDiametro();
     }
 
     public static double getPI() {
@@ -28,21 +27,18 @@ private static final double PI=Math.PI;
     public void setRadio(double radio) {
         this.radio = radio;
     }
-    public double calcularDiametro(){
-        this.diametro=radio*2;
-return diametro;        
+    protected double calcularDiametro(){
+return radio*2;        
     }
 
 
     @Override
-    public double calcularPerimetro() {
-        this.perimetro=2*Circulo.PI*radio;
-        return perimetro;
+    protected double calcularPerimetro() {
+        return 2*Circulo.PI*radio;
     }
     @Override
-    public double calcularArea() {
-        this.area=Math.pow(radio,2)*Circulo.PI;
-        return area;
+    protected double calcularArea() {
+        return Math.pow(radio,2)*Circulo.PI;
     }
 
     public Circulo(double radio) {
